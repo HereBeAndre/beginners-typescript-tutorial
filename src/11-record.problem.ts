@@ -1,7 +1,9 @@
 import { expect, it } from "vitest";
 
+type TCache = Record<string, string>;
+
 const createCache = () => {
-  const cache = {};
+  const cache: TCache = {};
 
   const add = (id: string, value: string) => {
     cache[id] = value;
